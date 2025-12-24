@@ -41,10 +41,8 @@ export default function Navbar() {
 
             {/* CTA Button (Desktop) */}
             <div className="hidden md:block">
-                <Link
-                    href="/login"
-                    className="bg-primary hover:bg-primary-hover text-white px-8 py-2 rounded-lg font-medium transition-all shadow-lg shadow-primary/20"
-                >
+                {/* Login Button */}
+                <Link href="/login" className="bg-white text-primary px-6 py-2.5 rounded-full font-bold uppercase text-xs tracking-widest shadow-lg hover:bg-gray-100 transition-colors border border-primary/10">
                     Login
                 </Link>
             </div>
@@ -58,7 +56,7 @@ export default function Navbar() {
             </button>
 
             {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 bg-secondary z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={`fixed inset-0 h-[100dvh] bg-secondary z-40 flex flex-col items-center justify-start pt-32 gap-8 transition-transform duration-300 md:hidden overflow-y-auto ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
                 {navLinks.map((link) => (
                     <Link
                         key={link.name}

@@ -72,12 +72,18 @@ export default function GetInTouch() {
                         </div>
                     </div>
 
-                    {/* Map Image Placeholder */}
-                    <div className="w-full aspect-[16/9] rounded-[2rem] overflow-hidden border border-gray-200 bg-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=2831&auto=format&fit=crop" alt="Map Location" className="w-full h-full object-cover opacity-80" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <MapPin className="text-primary drop-shadow-lg" size={48} fill="currentColor" />
-                        </div>
+                    {/* Google Map Embed */}
+                    <div className="w-full aspect-[16/9] rounded-[2rem] overflow-hidden border border-gray-200 shadow-sm relative z-0">
+                        <iframe
+                            src="https://maps.google.com/maps?q=VisionTech+PVT+LTD&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="VisionTech Location"
+                        ></iframe>
                     </div>
 
                 </div>
