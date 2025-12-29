@@ -23,7 +23,7 @@ export default function LoginVisual() {
             </div>
 
             {/* Floating Stats Card */}
-            <div className="absolute top-24 right-20 bg-white rounded-2xl p-6 shadow-2xl max-w-[200px] text-center transform rotate-6 animate-float">
+            <div className="absolute top-24 right-20 bg-white rounded-2xl p-6 shadow-2xl max-w-[200px] text-center transform rotate-6 animate-float z-20">
                 <div className="absolute top-2 right-2">
                     <ArrowUpRight size={20} className="text-gray-400" />
                 </div>
@@ -34,22 +34,13 @@ export default function LoginVisual() {
             </div>
 
             {/* Central Graphic (Simulated Molecule/Target) */}
-            <div className="relative z-10 w-80 h-80 rounded-full border border-white/20 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full border border-white/30 flex items-center justify-center animate-spin-slow">
-                    <div className="w-48 h-48 rounded-full border border-teal-400/50 flex items-center justify-center">
-                        <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center">
-                            {/* Inner Core */}
-                            <div className="w-4 h-4 bg-white rounded-full animate-ping"></div>
-                        </div>
-                    </div>
-                    {/* Orbital dots */}
-                    <div className="absolute top-0 left-1/2 w-4 h-4 bg-teal-400 rounded-full shadow-lg shadow-teal-400/50"></div>
-                    <div className="absolute bottom-0 right-1/2 w-4 h-4 bg-white rounded-full shadow-lg"></div>
-                </div>
-
-                {/* Outer orbital dots */}
-                <div className="absolute top-1/2 left-0 w-3 h-6 bg-white/50 rounded-full"></div>
-                <div className="absolute bottom-1/4 right-0 w-3 h-6 bg-white/50 rounded-full"></div>
+            {/* Central Graphic (Simulated Molecule/Target) */}
+            <div className="relative z-10 w-full h-[60%] flex items-center justify-center border-rounded-full">
+                <img
+                    src="/login.png"
+                    alt="Login Visual"
+                    className="w-full h-full object-contain scale-110"
+                />
             </div>
 
             {/* Footer Text */}

@@ -1,5 +1,6 @@
 import { ArrowRight, TrendingUp, Users } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -92,12 +93,14 @@ export default function Hero() {
                     </div>
 
                     {/* BOTTOM RIGHT OVERLAY: Content & Button */}
-                    <div className="absolute bottom-[1%] right-[2%] lg:-right-[1%] z-20 max-w-xs">
-                        <div className="bg-white/90 p-2 rounded-2xl shadow-xl border border-green-50 backdrop-blur-md">
-                            <p className="text-gray-700 font-serif text-xs mb-4">
+                    <div className="absolute bottom-[1%] right-[5] lg:right-[1%] z-20 max-w-[300px]   top-100">
+                        <div className="bg-white/90 p-2 rounded-2xl shadow-xl  backdrop-blur-md">
+                            <p className="text-gray-700 font-serif text-[12px] mb-2">
                                 We deliver intelligent, efficient drug safety solutions that improve performance, reduce risk, and protect patients with precision.
                             </p>
-
+                            <Link href="/contact#get-in-touch" className="bg-primary text-white px-6 py-1 rounded-full font-bold uppercase text-xs tracking-widest shadow-lg hover:bg-green-500 transition-colors border border-primary/10 inline-block">
+                                ENROLL NOW
+                            </Link>
                         </div>
                     </div>
 

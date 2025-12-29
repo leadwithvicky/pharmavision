@@ -94,7 +94,7 @@ export default function Footer() {
 
             <div className="max-w-[1400px] mx-auto pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-xs font-bold text-gray-800">
-                    © 2025 pharmavision. All Rights Reserved.
+                    © 2024 visiontech. All Rights Reserved.
                 </p>
 
                 <button className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-hover transition-colors shadow-lg">

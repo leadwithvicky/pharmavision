@@ -2,7 +2,7 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "luc
 
 export default function GetInTouch() {
     return (
-        <section className="w-full py-20 px-4 md:px-8 bg-secondary">
+        <section id="get-in-touch" className="w-full py-20 px-4 md:px-8 bg-secondary">
             <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
                 {/* Left: Form */}

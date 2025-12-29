@@ -39,7 +39,7 @@ export default function CourseDetailHero({ title, headline, image }: CourseDetai
 
                     {/* Top Cutout Text Overlay */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#f8fbfa] px-8 pt-4 pb-12 rounded-b-[3rem] text-center max-w-3xl hidden md:block">
-                        <p className="text-xs font-bold text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-md font-bold text-gray-700 leading-relaxed max-w-2xl mx-auto">
                             Gain the skills to translate medical data into accurate, industry-ready codes. Build confidence with practical training designed for global certification success.
                         </p>
                     </div>
@@ -71,10 +71,10 @@ export default function CourseDetailHero({ title, headline, image }: CourseDetai
                         <div className="hidden md:block w-px h-8 bg-white/20"></div>
 
                         {/* Enroll Button */}
-                        <button className="bg-[#f8fbfa] text-primary px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors flex items-center gap-2 shadow-lg">
+                        <Link href="/contact#get-in-touch" className="bg-[#f8fbfa] text-primary px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors flex items-center gap-2 shadow-lg">
                             Enroll Now
                             <MoveRight size={14} />
-                        </button>
+                        </Link>
 
                     </div>
 

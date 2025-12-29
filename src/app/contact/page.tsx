@@ -10,8 +10,8 @@ export default function ContactPage() {
         <main className="min-h-screen bg-secondary">
             <Navbar />
             <ContactHero />
-            <GetInTouch />
             <HowItWorks />
+            <GetInTouch />
             <ReadyToSupport />
             <Footer />
         </main>

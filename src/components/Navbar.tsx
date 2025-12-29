@@ -39,7 +39,7 @@ export default function Navbar() {
             {/* CTA Button (Desktop) */}
             <div className="hidden md:block">
                 {/* Login Button */}
-                <Link href="/login" className="bg-white text-primary px-6 py-2.5 rounded-full font-bold uppercase text-xs tracking-widest shadow-lg hover:bg-gray-100 transition-colors border border-primary/10">
+                <Link href="/login" className="bg-primary text-white px-6 py-2.5 rounded-full font-bold uppercase text-xs tracking-widest   shadow-lg hover:bg-green-500 transition-colors border border-primary/10">
                     Login
                 </Link>
             </div>
