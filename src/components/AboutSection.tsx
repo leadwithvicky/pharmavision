@@ -6,10 +6,10 @@ export default function AboutSection() {
             <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Left Image (Arch) */}
-                <div className="relative w-full aspect-[4/5] rounded-t-[20rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <div className="relative w-full aspect-[5/5] rounded-t-[20rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white">
                     <div
                         className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-217358c7e618?q=80&w=2070&auto=format&fit=crop')" }}
+                        style={{ backgroundImage: "url('landing/ab1.png')" }}
                     // Placeholder for certificate/books
                     />
                     <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
@@ -25,7 +25,7 @@ export default function AboutSection() {
                             WHERE ACCURACY BUILDS TRUST, AND TRUST BUILDS SUCCESS.
                         </h3>
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            VisionPharma helps learners build real-world skills through clear, practical, industry-focused training empowering them to grow with confidence.
+                            pharmavision helps learners build real-world skills through clear, practical, industry-focused training empowering them to grow with confidence.
                         </p>
                     </div>
 

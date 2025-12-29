@@ -1,59 +1,100 @@
 export default function PartnersSection() {
     const partners = [
-        { name: "DERIVE", logo: "https://placehold.co/100x50/white/0D9488?text=DERIVE" },
-        { name: "trendy vibez", logo: "https://placehold.co/100x50/white/0D9488?text=tv" },
-        { name: "RANSH", logo: "https://placehold.co/100x50/white/0D9488?text=RANSH" },
-        { name: "ClinicaMapletree", logo: "https://placehold.co/100x50/white/0D9488?text=CM" },
-        { name: "ARPAD", logo: "https://placehold.co/100x50/white/0D9488?text=ARPAD" },
-        { name: "BRC", logo: "https://placehold.co/100x50/white/0D9488?text=BRC" },
+        { name: "DERIVE", logo: "/partners/derive.png", url: "#" },
+        { name: "trendy vibez", logo: "/partners/trendyvibez.png", url: "https://trendyvibez.world" },
+        { name: "RANSH", logo: "/partners/ransh.png", url: "#" },
+        { name: "ClinicaMapletree", logo: "/partners/maple.png", url: "#" },
+        { name: "ARPAD", logo: "/partners/arpad.png", url: "#" },
+        { name: "BRC", logo: "/partners/brc.png", url: "#" },
+        { name: "WAAW", logo: "/partners/waaw.png", url: "https://waaw.world" },
     ];
 
     return (
-        <section className="w-full py-20 px-4 md:px-8 bg-secondary overflow-hidden">
+        <section className="w-full py-20 px-4 md:px-8 bg-[#F5FAF6] overflow-x-hidden">
             <div className="max-w-[1400px] mx-auto">
 
-                <h2 className="text-center font-serif text-3xl font-bold text-primary uppercase tracking-wide mb-12">
+                <h2 className="text-center font-serif text-3xl md:text-4xl font-bold text-[#1F4D36] uppercase tracking-wide mb-20 md:mb-24 drop-shadow-sm">
                     Our Partnered Companies
                 </h2>
 
-                {/* Bulb Grid */}
-                <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+                {/* Bulb Layout Container */}
+                {/* Visual alignment: Flex with wrapping, centered. */}
+                {/* User requested 7 in one row. We need to prevent wrapping on large screens and fit them. */}
+                <div className="flex flex-wrap lg:flex-nowrap justify-center gap-x-4 gap-y-16">
                     {partners.map((p, i) => (
-                        <div key={i} className="flex flex-col items-center group">
+                        <div key={i} className="flex flex-col items-center group relative min-w-[140px]">
 
-                            {/* Top Arc (The "Ceiling" mount) */}
-                            <div className="w-full h-8 bg-transparent flex justify-center items-end overflow-hidden">
-                                <div className="w-24 h-24 rounded-full border-t-8 border-primary absolute -mt-16"></div>
-                                {/* Visual hack for the green arc, simplified: */}
-                                <div className="w-full border-t-4 border-primary/20 rounded-t-full"></div>
+                            {/* The Green Top Arc */}
+                            {/* Positioned absolute relative to the bulb. 
+                                Styled to look like a thick protective cap/hood over the bulb.
+                                Using SVG for rounded ends (stroke-linecap).
+                            */}
+                            <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-[130%] h-[120px] pointer-events-none z-0">
+                                <svg viewBox="0 0 100 60" className="w-full h-full" preserveAspectRatio="xMidYMax meet">
+                                    {/* Arc path: M start_x start_y A rx ry rot large_arc sweep end_x end_y */}
+                                    {/* Drawing a semi-circle arch */}
+                                    <path
+                                        d="M 10 50 A 40 40 0 0 1 90 50"
+                                        fill="none"
+                                        stroke="#1F4D36"
+                                        strokeWidth="12"
+                                        strokeLinecap="round"
+                                    />
+                                </svg>
                             </div>
 
-                            {/* The Green Top Arc visual specifically from image */}
-                            <div className="w-32 h-16 border-t-8 border-primary rounded-t-full mb-0 opacity-0 md:opacity-100 hidden md:block" />
+                            {/* Bulb Shape Container */}
+                            {/* Replaced CSS shape with Image as requested */}
+                            {/* Reduced width from w-48 to w-40 to fit 7 in a row */}
+                            <div className="relative z-10 w-40 h-48 flex flex-col items-center justify-start pt-10 pb-4 px-4 filter drop-shadow-xl transition-transform hover:scale-105">
+                                {/* The Bulb Image Background */}
+                                <img
+                                    src="/aboutus/bulb.png"
+                                    alt="Bulb background"
+                                    className="absolute inset-0 w-full h-full object-contain z-0"
+                                />
 
-                            {/* Simplified structure for robustness: */}
-                            <div className="relative flex flex-col items-center">
-
-                                {/* The Green Arc (Desktop) */}
-                                <div className="absolute -top-12 w-40 h-20 border-t-[6px] border-primary rounded-t-full hidden md:block" />
-
-                                {/* Bulb Container */}
-                                <div className="w-40 h-40 bg-white rounded-full rounded-b-[4rem] shadow-xl flex items-center justify-center p-6 border border-gray-100 z-10 relative">
-                                    {/* Placeholder Logo */}
-                                    <div className="font-bold text-gray-800 text-center uppercase tracking-wider text-sm">
-                                        {p.name}
-                                    </div>
+                                {/* Logo / Content - Centered in the wide part of the bulb */}
+                                <div className="relative z-10 w-full h-[55%] flex items-center justify-center mt-0.5 px-2">
+                                    {/* Render Logo */}
+                                    {p.logo ? (
+                                        <img
+                                            src={p.logo}
+                                            alt={p.name}
+                                            className="w-full h-full object-contain filter drop-shadow-sm"
+                                        />
+                                    ) : (
+                                        <div className="text-center">
+                                            <h3 className="text-lg font-bold text-gray-800 uppercase tracking-widest leading-none">{p.name.split(' ')[0]}</h3>
+                                            {p.name.split(' ')[1] && <span className="text-[10px] uppercase tracking-widest text-[#1F4D36] block mt-1 font-semibold">{p.name.split(' ').slice(1).join(' ')}</span>}
+                                        </div>
+                                    )}
                                 </div>
+                            </div>
+
+                            {/* Connector Line Section */}
+                            <div className="flex flex-col items-center -mt-1 z-0 relative">
+                                {/* Dot at start */}
+                                <div className="w-3 h-3 bg-[#1F4D36] rounded-full mb-0 shadow-sm relative z-20"></div>
 
                                 {/* Dashed Line */}
-                                <div className="h-12 w-0 border-l-2 border-dashed border-primary my-2"></div>
+                                <div className="w-[2px] h-16 border-l-[2px] border-dashed border-[#1F4D36] my-0"></div>
 
-                                {/* Button */}
-                                <button className="bg-primary hover:bg-primary-hover text-white text-[0.65rem] font-bold px-6 py-2 rounded-lg uppercase tracking-widest shadow-md transition-all">
-                                    Know More
-                                </button>
-
+                                {/* Diamond/Dot at end */}
+                                <div className="w-2 h-2 bg-[#1F4D36] rotate-45 mb-2"></div>
                             </div>
+
+
+                            {/* Button - Now a Link */}
+                            <a
+                                href={p.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#1F4D36] hover:bg-[#163c29] text-white text-[10px] font-bold px-6 py-2 rounded-[4px] uppercase tracking-[0.15em] shadow-lg transition-transform hover:-translate-y-1 block"
+                            >
+                                Know More
+                            </a>
+
                         </div>
                     ))}
                 </div>

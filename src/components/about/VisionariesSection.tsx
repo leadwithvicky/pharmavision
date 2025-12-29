@@ -4,14 +4,18 @@ const founders = [
     {
         name: "VINAY TEJA",
         title: "FOUNDER & CEO",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop", // Professional Male
+        image: "/aboutus/VINAY.jpg", // Professional Male
         bio: "A visionary leader with a passion for transforming education through technology. With extensive experience in edtech and a deep understanding of student needs, Vinay drives innovation and strategic growth at VisionTech. His commitment to excellence and student success has been the cornerstone of our company's mission to democratize quality education.",
+        linkedin: "https://www.linkedin.com/in/vinay-teja-ceo/?originalSubdomain=in",
+        portfolio: "https://vinayteja.com",
     },
     {
         name: "VAMSHI KRISHNA",
         title: "CO-FOUNDER & MANAGING DIRECTOR",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1887&auto=format&fit=crop", // Professional Male 2
+        image: "/aboutus/VAMSHI.jpg", // Professional Male 2
         bio: "A leader on operational excellence and team development, Vamshi brings expertise in business operations and talent management, ensuring VisionTech delivers learning experiences. His approach and attention to detail have been instrumental in building a culture of improvement and student-centric innovation at VisionTech.",
+        linkedin: "https://www.linkedin.com/in/vamshi-krishna-edla-2334a8221/?originalSubdomain=in",
+        portfolio: "https://portfolio-vamshi-krishna-edla.vercel.app/",
     },
 ];
 
@@ -59,12 +63,12 @@ export default function VisionariesSection() {
 
                                 {/* Links */}
                                 <div className="mt-auto flex gap-4">
-                                    <button className="flex items-center gap-2 text-primary font-bold text-xs uppercase hover:underline">
+                                    <a href={f.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary font-bold text-xs uppercase hover:underline">
                                         <Linkedin size={16} /> LinkedIn
-                                    </button>
-                                    <button className="flex items-center gap-2 text-gray-600 font-bold text-xs uppercase hover:text-primary transition-colors">
+                                    </a>
+                                    <a href={f.portfolio} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 font-bold text-xs uppercase hover:text-primary transition-colors">
                                         <LinkIcon size={16} /> Portfolio
-                                    </button>
+                                    </a>
                                 </div>
 
                             </div>

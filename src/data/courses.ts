@@ -188,18 +188,18 @@ export const courses = [
         id: "medical-coding",
         title: "MEDICAL CODING",
         headline: "YOUR GATEWAY TO HEALTHCARE CODING EXCELLENCE",
-        heroImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c1.png",
         description: "Gain the skills to translate medical data into accurate, industry-ready codes. Build confidence with practical training designed for global certification success.",
         price: "₹15,000",
         overview: {
-            about: "This Medical Coding Course Online by VisionPharma Edtech is designed for freshers, graduates, and healthcare professionals aiming to build a strong career in pharmaceutical online courses, healthcare professional development courses, and the rapidly growing US RCM industry. \n\nLearn ICD-10-CM, CPT, HCPCS, compliance, auditing, denial management, case coding, and exam prep with structured online training.",
+            about: "This Medical Coding Course Online by pharmavision Edtech is designed for freshers, graduates, and healthcare professionals aiming to build a strong career in pharmaceutical online courses, healthcare professional development courses, and the rapidly growing US RCM industry. \n\nLearn ICD-10-CM, CPT, HCPCS, compliance, auditing, denial management, case coding, and exam prep with structured online training.",
             details: [
                 { label: "Level", value: "Beginner → Advanced" },
                 { label: "Duration", value: "6 - 12 Months" },
                 { label: "Study Mode", value: "Online (Live + Recorded)" },
                 { label: "Students Enrolled", value: "12,540+" },
                 { label: "Instructor", value: "BDS / CPC certified, 3+ years experience" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -238,7 +238,7 @@ export const courses = [
         id: "pharmacovigilance",
         title: "PHARMACOVIGILANCE",
         headline: "SHAPE THE FUTURE OF PATIENT SAFETY THROUGH EXPERTISE",
-        heroImage: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c2.png",
         description: "Learn how medicines are monitored, evaluated, and made safer for the world. Develop strong expertise in case processing, analysis, and global safety standards.",
         price: "₹18,000",
         overview: {
@@ -249,7 +249,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online (Live + Recorded)" },
                 { label: "Students Enrolled", value: "8,200+" },
                 { label: "Instructor", value: "PharmD / PV Team Lead, 7+ years experience" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -283,7 +283,7 @@ export const courses = [
         id: "clinical-research",
         title: "CLINICAL RESEARCH",
         headline: "WHERE SCIENTIFIC DISCOVERY MEETS REAL-WORLD IMPACT",
-        heroImage: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c3.png",
         description: "Learn how clinical trials transform ideas into life-changing treatments. Build the skills to support global research, patient safety, and medical breakthroughs.",
         price: "₹20,000",
         overview: {
@@ -294,7 +294,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online Hybrid" },
                 { label: "Students Enrolled", value: "10,000+" },
                 { label: "Instructor", value: "M.Sc Clinical Research, 10+ years exp" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -327,7 +327,7 @@ export const courses = [
         id: "clinical-sas-programming",
         title: "CLINICAL SAS PROGRAMMING",
         headline: "TURN CLINICAL DATA INTO POWERFUL INSIGHTS WITH ANALYTICS",
-        heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c4.png",
         description: "Learn SAS programming for clinical trial data cleaning, analysis, TLF creation, and CDISC workflows. Develop the skills needed for high-value roles in biostatistics.",
         price: "₹25,000",
         overview: {
@@ -338,7 +338,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online (Live Coding)" },
                 { label: "Students Enrolled", value: "5,500+" },
                 { label: "Instructor", value: "Certified SAS Programmer" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -370,7 +370,7 @@ export const courses = [
         id: "clinical-data-management",
         title: "CLINICAL DATA MANAGEMENT",
         headline: "BUILD ACCURACY AND INTEGRITY IN CLINICAL DATA MANAGEMENT",
-        heroImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c5.png",
         description: "Gain practical skills in CRF design, database setup, discrepancy handling, and study close-out. Get job-ready for CDM roles across CROs, pharma companies, and global research teams.",
         price: "₹16,000",
         overview: {
@@ -381,7 +381,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online" },
                 { label: "Students Enrolled", value: "7,000+" },
                 { label: "Instructor", value: "Biomedical Engineer / CDM Lead" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -414,7 +414,7 @@ export const courses = [
         id: "ai-in-pharma",
         title: "AI IN PHARMA",
         headline: "WHERE DRUG DISCOVERY MEETS INTELLIGENT AUTOMATION",
-        heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1932&auto=format&fit=crop",
+        heroImage: "landing/c6.png",
         description: "Explore how AI improves research, safety workflows, and real-world evidence. Develop skills to use modern AI tools shaping future drug development.",
         price: "₹30,000",
         overview: {
@@ -425,7 +425,7 @@ export const courses = [
                 { label: "Study Mode", value: "Weekend Workshops" },
                 { label: "Students Enrolled", value: "2,000+" },
                 { label: "Instructor", value: "PhD in Bioinformatics / AI Specialist" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -455,7 +455,7 @@ export const courses = [
         id: "medical-writing-certification",
         title: "MEDICAL WRITING CERTIFICATION",
         headline: "WRITE WITH CLARITY, PRECISION, AND SCIENTIFIC IMPACT",
-        heroImage: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop",
+        heroImage: "landing/c7.png",
         description: "Create clear regulatory documents, clinical study reports, and publication-ready content. Build skills for careers in scientific communication and regulatory writing.",
         price: "₹14,000",
         overview: {
@@ -466,7 +466,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online" },
                 { label: "Students Enrolled", value: "4,500+" },
                 { label: "Instructor", value: "Senior Medical Writer" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -496,7 +496,7 @@ export const courses = [
         id: "quality-assurance",
         title: "QUALITY ASSURANCE",
         headline: "ENSURE EXCELLENCE ACROSS EVERY PHARMA PROCESS",
-        heroImage: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c8.png",
         description: "Learn GxP standards, audits, CAPA, and key documentation practices in pharma quality systems. Build the skills needed for QA roles focused on compliance and inspection readiness.",
         price: "₹16,500",
         overview: {
@@ -507,7 +507,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online" },
                 { label: "Students Enrolled", value: "6,000+" },
                 { label: "Instructor", value: "QA Manager" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [
@@ -538,7 +538,7 @@ export const courses = [
         id: "regulatory-affairs",
         title: "REGULATORY AFFAIRS",
         headline: "NAVIGATE GLOBAL DRUG APPROVAL WITH CONFIDENCE",
-        heroImage: "https://images.unsplash.com/photo-1576091160550-217358c7e618?q=80&w=2070&auto=format&fit=crop",
+        heroImage: "landing/c9.png",
         description: "Learn the essentials of dossiers, submissions, labeling, and global regulatory standards. Prepare for roles in regulatory strategy, compliance, and product lifecycle management.",
         price: "₹19,000",
         overview: {
@@ -549,7 +549,7 @@ export const courses = [
                 { label: "Study Mode", value: "Online" },
                 { label: "Students Enrolled", value: "5,100+" },
                 { label: "Instructor", value: "RA Manager US/EU Markets" },
-                { label: "Platform", value: "VisionPharma.world" }
+                { label: "Platform", value: "pharmavision.world" }
             ]
         },
         modules: [

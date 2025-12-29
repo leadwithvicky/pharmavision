@@ -20,10 +20,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 w-full py-4 px-4 md:px-12 flex items-center justify-between bg-secondary/90 backdrop-blur-md border-b border-white/20 shadow-sm transition-all">
             {/* Logo */}
             <Link href="/" className="flex flex-col items-center gap-0 group z-50 relative">
-                <div className="relative">
-                    <ShieldPlus className="w-8 h-8 text-blue-600 fill-blue-600/10" />
-                </div>
-                <span className="text-primary font-bold text-sm tracking-wide">VisionPharma</span>
+                <img src="/logo.png" alt="Pharmavision" className="h-12 w-auto object-contain" />
             </Link>
 
             {/* Desktop Links */}

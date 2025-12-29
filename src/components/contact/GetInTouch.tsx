@@ -12,7 +12,7 @@ export default function GetInTouch() {
                         <p className="text-[10px] md:text-xs text-green-100 opacity-80 uppercase tracking-wide">We're here to guide you toward the right course and career pathway.</p>
                     </div>
 
-                    <form className="space-y-6">
+                    <form className="space-y-8">
                         <div className="relative">
                             <input type="text" placeholder="NAME" className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:border-white focus:bg-white/30 text-xs font-bold uppercase tracking-wider" />
                         </div>
@@ -67,13 +67,13 @@ export default function GetInTouch() {
                             </div>
                             <div className="flex items-center gap-4">
                                 <Mail className="text-primary" size={20} />
-                                <span className="font-bold text-gray-900 text-sm">hello@visionpharma.com</span>
+                                <span className="font-bold text-gray-900 text-sm">hello@pharmavision.com</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Google Map Embed */}
-                    <div className="w-full aspect-[16/9] rounded-[2rem] overflow-hidden border border-gray-200 shadow-sm relative z-0">
+                    <div className="w-full aspect-[20/9] rounded-[2rem] overflow-hidden border border-gray-200 shadow-sm relative z-0">
                         <iframe
                             src="https://maps.google.com/maps?q=VisionTech+PVT+LTD&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             width="100%"

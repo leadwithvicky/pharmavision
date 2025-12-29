@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "VisionPharma - Advancing Drug Safety",
+  title: "pharmavision - Advancing Drug Safety",
   description: "Advanced drug safety through intelligence and care.",
 };
 

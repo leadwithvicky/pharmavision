@@ -2,22 +2,22 @@ const features = [
     {
         title: "PRECISION YOU CAN TRUST",
         description: "We deliver accurate, structured, audit-ready results that strengthen operations.",
-        image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=2069&auto=format&fit=crop", // Pills/Meds
+        image: "landing/wcu4.png", // Pills/Meds
     },
     {
         title: "EXPERTISE THAT DELIVERS",
         description: "Our team brings deep industry knowledge and real-world experience.",
-        image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=1999&auto=format&fit=crop", // Microscope
+        image: "landing/wcu2.jpg", // Microscope
     },
     {
         title: "SMARTER, FASTER SYSTEMS",
         description: "Intelligent tools and optimized workflows reduce errors and speed performance.",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop", // Lab automation/Tech
+        image: "landing/wcu1.jpg", // Lab automation/Tech
     },
     {
         title: "RELIABILITY FROM START TO FINISH",
         description: "Dependable communication and timely delivery ensure seamless project support.",
-        image: "https://images.unsplash.com/photo-1565514020176-db8b3ec4a3e7?q=80&w=2070&auto=format&fit=crop", // Factory/Production
+        image: "landing/wcu3.jpg", // Factory/Production
     },
 ];
 

@@ -4,57 +4,66 @@ export default function ContactHero() {
             <div className="max-w-[1400px] mx-auto text-center">
 
                 {/* Intro Text */}
-                <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary uppercase tracking-wider mb-8">
+                <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1F4D36] uppercase tracking-wider mb-6">
                     Contact Us
                 </h1>
-                <h2 className="font-bold text-xl md:text-2xl text-gray-900 uppercase tracking-wide mb-6">
+                <h2 className="font-bold text-xl md:text-3xl text-gray-900 uppercase tracking-wide mb-8 px-4">
                     We're Here to Support Your Career Journey
                 </h2>
-                <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed mb-16">
-                    Whether you have questions about courses, pricing, certifications, or placements our team is ready to help you every step of the way.
+                <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed mb-16 px-4">
+                    Whether you have questions about courses, pricing, certifications, or placements,<br className="hidden md:block" />
+                    our team is ready to help you every step of the way.
                 </p>
 
                 {/* Hero Image Block */}
-                <div className="relative w-full max-w-5xl mx-auto">
+                <div className="relative w-full max-w-6xl mx-auto mb-24">
                     {/* Image Container */}
-                    <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-[2.5rem] overflow-hidden shadow-2xl relative">
+                    <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl relative bg-gray-100">
                         <img
-                            src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=2069&auto=format&fit=crop" // Support Team
+                            src="/contact.png" // Support Team
                             alt="Support Team"
-                            className="w-full h-full object-cover object-top"
+                            className="w-full h-full object-cover object-center"
                         />
 
-                        {/* Bottom Curved Overlay */}
-                        {/* Using CSS clip-path or simple absolute positioning with SVG for the curve */}
-                        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-secondary rounded-t-[50%] scale-x-150 translate-y-[40%] flex items-start justify-center pt-8">
+                        {/* Overlay Gradient (Optional for text readability if needed) */}
+                        <div className="absolute inset-0 bg-black/10"></div>
+
+                        {/* Bottom Wave SVG */}
+                        <div className="absolute bottom-0 left-0 w-full leading-none z-10 translate-y-[1px]">
+                            <svg className="block w-full h-16 md:h-32" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                                <path
+                                    fill="#F3F4F6" // bg-secondary
+                                    fillOpacity="1"
+                                    d="M0,0 Q720,200 1440,0 L1440,320 L0,320 Z"
+                                />
+                            </svg>
                         </div>
 
-                        {/* Floating Button "OUR SERVICES" - positioned on the curve */}
+                        {/* Floating Button "OUR SERVICES" - positioned on the peak of the hill */}
                         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
-                            <button className="bg-primary text-white px-8 py-3 rounded-xl font-bold uppercase tracking-wider shadow-lg hover:bg-green-800 transition-colors">
+                            <button className="bg-[#1F4D36] text-white px-8 py-3 rounded-md font-serif font-bold uppercase tracking-wider shadow-lg hover:bg-[#163c29] transition-colors border border-[#1F4D36]">
                                 Our Services
                             </button>
                         </div>
-
                     </div>
                 </div>
 
                 {/* Stats */}
-                <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div className="flex flex-col items-center">
-                        <span className="font-serif text-3xl text-primary font-bold mb-2">24/7</span>
-                        <span className="font-bold uppercase text-xs tracking-widest mb-2">Support Assistance</span>
-                        <p className="text-[10px] text-gray-500 max-w-[150px] leading-tight">Fast response to queries via email, WhatsApp, and LMS helpdesk.</p>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                    <div className="flex flex-col items-center text-center">
+                        <span className="font-serif text-4xl text-[#1F4D36] font-bold mb-3">24/7</span>
+                        <span className="font-bold uppercase text-sm tracking-widest mb-3 text-gray-900 font-serif">Support Assistance</span>
+                        <p className="text-[11px] text-gray-500 max-w-[180px] leading-relaxed mx-auto">Fast response to queries via email, WhatsApp, and LMS helpdesk.</p>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <span className="font-serif text-3xl text-primary font-bold mb-2">95%</span>
-                        <span className="font-bold uppercase text-xs tracking-widest mb-2">Placement Readiness</span>
-                        <p className="text-[10px] text-gray-500 max-w-[150px] leading-tight">Learners graduate with real-world skills, interview prep, and career confidence.</p>
+                    <div className="flex flex-col items-center text-center">
+                        <span className="font-serif text-4xl text-[#1F4D36] font-bold mb-3">95%</span>
+                        <span className="font-bold uppercase text-sm tracking-widest mb-3 text-gray-900 font-serif">Placement Readiness</span>
+                        <p className="text-[11px] text-gray-500 max-w-[180px] leading-relaxed mx-auto">Learners graduate with real-world skills, interview prep, and career confidence.</p>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <span className="font-serif text-3xl text-primary font-bold mb-2">40+</span>
-                        <span className="font-bold uppercase text-xs tracking-widest mb-2">Expert Mentors</span>
-                        <p className="text-[10px] text-gray-500 max-w-[150px] leading-tight">Learn from experienced industry experts who bring practical insights to every session.</p>
+                    <div className="flex flex-col items-center text-center">
+                        <span className="font-serif text-4xl text-[#1F4D36] font-bold mb-3">40+</span>
+                        <span className="font-bold uppercase text-sm tracking-widest mb-3 text-gray-900 font-serif">Expert Mentors</span>
+                        <p className="text-[11px] text-gray-500 max-w-[180px] leading-relaxed mx-auto">Learn from experienced industry experts who bring practical insights to every session.</p>
                     </div>
                 </div>
 

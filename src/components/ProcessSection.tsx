@@ -65,87 +65,85 @@ const steps = [
 
 export default function ProcessSection() {
     return (
-        <section id="process" className="w-full py-20 px-4 md:px-8 bg-secondary">
+        <section id="process" className="w-full py-20 px-4 md:px-8 bg-[#f8faf9] overflow-hidden">
             <div className="max-w-[1400px] mx-auto">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="font-serif text-4xl text-primary font-bold">
+                <div className="text-center mb-20 space-y-4">
+                    <h2 className="font-serif text-4xl md:text-5xl text-[#0A4D5C] font-bold">
                         DRUG DISCOVERY PROCESS
                     </h2>
-                    <p className="font-bold text-gray-800 tracking-wide">
+                    <p className="font-bold text-gray-800 tracking-wide text-sm md:text-base uppercase">
                         MAPPING THE PATH FROM RESEARCH TO REAL-WORLD RESULTS.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
                     {steps.map((step, index) => {
-                        const isBlue = index % 2 !== 0; // Alternating style
+                        // Even index (0, 2) => White Card (Step 1, 3)
+                        // Odd index (1, 3) => Dark Card (Step 2, 4)
+                        const isDark = index % 2 !== 0;
+
                         return (
                             <div
                                 key={step.id}
-                                className={`flex flex-col rounded-3xl overflow-hidden relative shadow-lg transition-transform hover:-translate-y-2 duration-300
-                  ${isBlue ? "bg-primary text-white" : "bg-white text-primary border border-gray-100"}
-                `}
-                                style={{
-                                    // Custom heavy rounded corners effect
-                                    borderRadius: "2rem",
-                                    // To simulate the 'cut' corner at bottom right, we'd need clip-path or complex borders. 
-                                    // For simplicity in this iteration, using standard rounded corners but adding a decorative element.
-                                }}
+                                className={`relative flex flex-col pt-12 pb-8 px-6 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[5rem] shadow-xl transition-transform hover:-translate-y-2 duration-300 min-h-[600px]
+                                    ${isDark
+                                        ? "bg-[#0F5A6D] text-white"
+                                        : "bg-white text-[#0A4D5C] border border-[#0A4D5C]"}
+                                `}
                             >
                                 {/* Floating Icon Badge */}
-                                <div className={`absolute top-0 left-8 -translate-y-1/2 w-16 h-16 rounded-2xl flex items-center justify-center shadow-md transform rotate-3
-                    ${isBlue ? "bg-white text-primary" : "bg-primary text-white"}
-                `}>
+                                <div className={`absolute -top-8 left-8 w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg z-20
+                                    ${isDark
+                                        ? "bg-white text-[#0A4D5C]"  // Dark card has white icon box
+                                        : "bg-[#0A4D5C] text-white"} // White card has dark icon box
+                                `}>
                                     <step.icon size={32} strokeWidth={1.5} />
                                 </div>
 
-                                {/* Card Content */}
-                                <div className="p-8 pt-12 flex-1 flex flex-col">
+                                {/* Years & Bar */}
+                                <div className="flex items-center justify-end gap-3 mb-6">
+                                    {/* The decorative bar */}
+                                    <div className={`h-1.5 w-20 rounded-full ${isDark ? "bg-white" : "bg-[#0A4D5C]"}`}></div>
+                                    <span className={`text-xs font-bold font-serif uppercase tracking-widest`}>
+                                        {step.years}
+                                    </span>
+                                </div>
 
-                                    {/* Header */}
-                                    <div className="flex justify-end mb-6">
-                                        <span className={`text-xs font-bold py-1 px-3 border-b-2 
-                        ${isBlue ? "border-white/30" : "border-primary/20"}
-                    `}>
-                                            {step.years}
-                                        </span>
+                                {/* Title */}
+                                <h3 className="font-serif text-lg font-bold mb-8 text-center tracking-wide uppercase">
+                                    {step.title}
+                                </h3>
+
+                                {/* Content Sections */}
+                                <div className="space-y-6 text-[0.75rem] leading-relaxed flex-1 font-sans">
+                                    <div>
+                                        <h4 className="font-bold uppercase mb-1 tracking-wider text-[0.7rem] opacity-90">The Mission of This Phase</h4>
+                                        <p className="opacity-80">{step.mission}</p>
                                     </div>
 
-                                    <h3 className="font-serif text-xl font-bold mb-6 text-center tracking-wide">
-                                        {step.title}
-                                    </h3>
-
-                                    <div className="space-y-6 text-[0.8rem] leading-relaxed flex-1">
-                                        <div>
-                                            <h4 className={`font-bold uppercase mb-2 text-[0.7rem] tracking-wider opacity-90`}>The Mission of This Phase</h4>
-                                            <p className="opacity-90">{step.mission}</p>
-                                        </div>
-
-                                        <div>
-                                            <h4 className={`font-bold uppercase mb-2 text-[0.7rem] tracking-wider opacity-90`}>Our Approach</h4>
-                                            <ul className="space-y-1 list-disc pl-4 opacity-90 marker:text-[0.6rem]">
-                                                {step.approach.map((item, i) => (
-                                                    <li key={i}>{item}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-
-                                        <div>
-                                            <h4 className={`font-bold uppercase mb-2 text-[0.7rem] tracking-wider opacity-90`}>Core Element</h4>
-                                            <p className="opacity-90">{step.core}</p>
-                                        </div>
-
-                                        <div>
-                                            <h4 className={`font-bold uppercase mb-2 text-[0.7rem] tracking-wider opacity-90`}>The Impact</h4>
-                                            <p className="opacity-90">{step.impact}</p>
-                                        </div>
+                                    <div>
+                                        <h4 className="font-bold uppercase mb-1 tracking-wider text-[0.7rem] opacity-90">Our Approach</h4>
+                                        <ul className="space-y-1 list-disc pl-3 opacity-80 marker:text-[0.6rem]">
+                                            {step.approach.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ul>
                                     </div>
 
-                                    {/* ID Number at bottom */}
-                                    <div className="mt-8 pt-4 border-t border-current border-opacity-20">
-                                        <span className="font-serif text-2xl font-bold opacity-80">{step.id}</span>
+                                    <div>
+                                        <h4 className="font-bold uppercase mb-1 tracking-wider text-[0.7rem] opacity-90">Core Element</h4>
+                                        <p className="opacity-80">{step.core}</p>
                                     </div>
 
+                                    <div>
+                                        <h4 className="font-bold uppercase mb-1 tracking-wider text-[0.7rem] opacity-90">The Impact</h4>
+                                        <p className="opacity-80">{step.impact}</p>
+                                    </div>
+                                </div>
+
+                                {/* ID Number */}
+                                <div className={`mt-8 pt-4 border-t ${isDark ? "border-white/20" : "border-[#0A4D5C]/20"}`}>
+                                    <span className="font-serif text-2xl font-bold opacity-100">{step.id}</span>
                                 </div>
                             </div>
                         );

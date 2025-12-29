@@ -8,11 +8,8 @@ export default function Footer() {
 
                 {/* Brand Column */}
                 <div className="lg:col-span-1 space-y-6">
-                    <Link href="/" className="flex items-center gap-2">
-                        <div className="relative">
-                            <ShieldPlus className="w-10 h-10 text-blue-600 fill-blue-600/10" />
-                        </div>
-                        <span className="text-primary font-bold text-lg tracking-wide">VisionPharma</span>
+                    <Link href="/" className="inline-block">
+                        <img src="/logo.png" alt="Pharmavision" className="h-14 w-auto object-contain" />
                     </Link>
                     <h2 className="font-serif text-2xl font-bold text-gray-900 leading-tight uppercase">
                         Learn The Skills That Global Pharma Trusts
@@ -76,7 +73,7 @@ export default function Footer() {
                         </div>
                         <div className="flex gap-3">
                             <Mail size={18} className="text-primary flex-shrink-0" />
-                            <span>hello@visionpharma.com</span>
+                            <span>hello@pharmavision.com</span>
                         </div>
                     </div>
 
@@ -97,7 +94,7 @@ export default function Footer() {
 
             <div className="max-w-[1400px] mx-auto pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-xs font-bold text-gray-800">
-                    © 2025 visionpharma. All Rights Reserved.
+                    © 2025 pharmavision. All Rights Reserved.
                 </p>
 
                 <button className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-hover transition-colors shadow-lg">

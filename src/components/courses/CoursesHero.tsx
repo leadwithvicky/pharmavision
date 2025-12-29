@@ -22,7 +22,7 @@ export default function CoursesHero() {
                     {/* Image */}
                     <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl relative">
                         <img
-                            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop" // Tech/Pharma Lab Interface
+                            src="aboutus/oc.png" // Tech/Pharma Lab Interface
                             alt="Pharma Education"
                             className="w-full h-full object-cover"
                         />

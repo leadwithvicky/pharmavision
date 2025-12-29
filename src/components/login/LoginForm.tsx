@@ -14,7 +14,7 @@ export default function LoginForm() {
                     <ShieldPlus className="w-12 h-12 text-blue-600 fill-blue-600/10" />
                     {/* Small accent to match logo in image if needed */}
                 </div>
-                <span className="text-primary font-bold text-xl tracking-wide">VisionPharma</span>
+                <span className="text-primary font-bold text-xl tracking-wide">pharmavision</span>
             </div>
 
             <h2 className="font-serif text-center text-2xl font-bold text-gray-900 mb-12 uppercase tracking-wide">

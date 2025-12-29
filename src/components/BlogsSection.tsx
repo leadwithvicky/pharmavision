@@ -2,17 +2,17 @@ const blogs = [
     {
         title: "INTELLIGENT PHARMA REVOLUTION",
         description: "AI is transforming pharma workflows and creating high-growth roles for learners skilled in Python, ML, and automation.",
-        image: "https://images.unsplash.com/photo-1620912189868-38f0607142df?q=80&w=2069&auto=format&fit=crop", // Futuristic UI/Screen
+        image: "landing/b1.png", // Futuristic UI/Screen
     },
     {
         title: "CLINICAL DATA CAREERS RISING",
         description: "Mastering CDM tools like EDC, CRFs, and data workflows opens doors to high-demand, high-paying roles in global trials.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", // Data/Charts
+        image: "landing/b2.png", // Data/Charts
     },
     {
         title: "REGULATORY CAREERS MADE SIMPLE",
         description: "Mastering CTD/eCTD submissions, labeling rules, and ICH guidelines sets the foundation for strong global careers in Regulatory Affairs.",
-        image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1887&auto=format&fit=crop", // Documents/Global
+        image: "landing/b3.png", // Documents/Global
     },
 ];
 

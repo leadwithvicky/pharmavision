@@ -1,4 +1,4 @@
-import { ChartNoAxesCombined, GraduationCap, Layers } from "lucide-react";
+import { ChartNoAxesCombined, GraduationCap, Layers, Check } from "lucide-react";
 
 export default function WhoWeAre() {
     return (
@@ -10,7 +10,7 @@ export default function WhoWeAre() {
                     {/* Main Image Container with rounded corners */}
                     <div className="relative w-full aspect-[4/4] md:aspect-[5/4] bg-blue-900 rounded-[3rem] overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=2070&auto=format&fit=crop" // Crystals/Abstract
+                            src="/aboutus/WWA.png" // Crystals/Abstract
                             alt="Who We Are"
                             className="w-full h-full object-cover"
                         />
@@ -23,7 +23,7 @@ export default function WhoWeAre() {
 
                     <div className="absolute bottom-10 -right-6 md:-right-12 w-32 h-32 md:w-40 md:h-40 bg-secondary rounded-full flex items-center justify-center z-10">
                         {/* Spinning Text Ring (Simplified representation) */}
-                        <div className="w-full h-full relative animate-spin-slow">
+                        <div className="w-full h-full relative animate-[spin_10s_linear_infinite]">
                             <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-gray-900">
                                 <path id="textPath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
                                 <text className="text-[10px] font-bold uppercase tracking-widest fill-current">
@@ -33,9 +33,9 @@ export default function WhoWeAre() {
                                 </text>
                             </svg>
                         </div>
-                        {/* Inner Arrow */}
+                        {/* Inner Check Icon */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-10 h-1 border-t-2 border-dashed border-gray-900 rotate-45"></div>
+                            <Check className="w-8 h-8 text-[#2A5C43] stroke-[3]" />
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function WhoWeAre() {
                             YOUR FIRST STEP TOWARD A STRONGER FUTURE.
                         </h3>
                         <p className="text-gray-600 leading-relaxed">
-                            VisionPharma delivers practical, industry-focused training that helps learners build real-world skills and grow into confident life-science professionals.
+                            pharmavision delivers practical, industry-focused training that helps learners build real-world skills and grow into confident life-science professionals.
                         </p>
                     </div>
 
