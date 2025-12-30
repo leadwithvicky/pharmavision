@@ -115,7 +115,7 @@ const generateCompanies = (category: string) => {
 
 // Helper to generate consistent dummy reviews
 const generateReviews = (category: string) => {
-    const baseReviews: Record<string, { id: number, name: string, comment: string, image?: string }[]> = {
+    const baseReviews: Record<string, { id: number, name: string, comment: string, image?: string, mentor?: string, college?: string, program?: string }[]> = {
         coding: [
             { id: 1, name: "VIJAY A", comment: "The detailed breakdown of ICD-10 guidelines was fantastic. Passed my CPC exam on the first attempt!", image: "" },
             { id: 2, name: "ROSHINI K", comment: "I really appreciated the live chart auditing sessions. It gave me real confidence for my interview.", image: "" },
@@ -124,13 +124,50 @@ const generateReviews = (category: string) => {
             { id: 5, name: "PRADEEP R", comment: "Got placed at Omega Healthcare within 2 months of completing the course. Thank you team!", image: "" },
             { id: 6, name: "SHALINI N", comment: "The RCM concepts were explained well. Good balance of theory and practicals.", image: "" }
         ],
+        medical_coding: [
+            { id: 1, name: "Anuja Bhosale", comment: "Recently completed my Medical Coding course at Vision Tech Ltd and had a great learning experience. My mentor, Pravallika ma’am, taught very well and cleared doubts immediately, which gave better clarity of concepts. Weekly quizzes and real-time projects helped a lot. Vision Tech is doing a great job.", image: "", mentor: "Pravallika Yadav" },
+            { id: 2, name: "Bhoomika Molli", comment: "I am Bhoomika from Vignan College and recently pursued my M.Pharm. Training in Medical Coding at VisionTech was an excellent experience. Dr. Pravallika ma’am explains concepts in a simple and beginner-friendly way. Well-structured classes, regular practice, and doubt-clearing sessions helped build confidence. A good coaching center to start a career in medical coding.", image: "", mentor: "Pravallika Yadav", college: "Vignan College" },
+            { id: 3, name: "Bhosale Anuja Madhav", comment: "I had a great learning experience in medical coding coaching. Pravallika ma’am explains coding concepts clearly and patiently. The training improved both my theoretical and practical knowledge. Highly recommended for building a strong career in medical coding.", image: "", mentor: "Pravallika Yadav", college: "Swami Vivekanand College, Swami Ramanand Tirth University" },
+            { id: 4, name: "Prashant Mali", comment: "Excellent experience with the Medical Coding training program. The curriculum covered ICD-10, CPT, and HCPCS in depth. Mentorship by Pravallika Yadav gave me confidence to pursue a career in healthcare.", image: "", mentor: "Pravallika Yadav", college: "P.G College of Pharmaceutical Sciences and Research, Chaupale" },
+            { id: 5, name: "Anonymous Student", comment: "Completed an online Medical Coding course with VisionTech. Beginner-friendly classes, MCQ tests, and practical projects provided real-time exposure and boosted my confidence.", image: "" },
+            { id: 6, name: "Indhuja Jeevagan", comment: "The online Medical Coding course at VisionTech was very valuable. Clear explanations, regular tests, and projects helped me gain confidence.", image: "" },
+            { id: 7, name: "Pranali Ravekar", comment: "VisionTech is a very good platform for medical coding. Dr. Pravallika ma’am’s teaching is excellent and helped me understand concepts clearly.", image: "" },
+            { id: 8, name: "Amena Tabassum", comment: "Learning medical coding from VisionTech was an amazing experience. The mentors were very cooperative and supportive.", image: "" },
+            { id: 9, name: "Gowthami Satharajupalli", comment: "The medical coding internship course was a great learning experience and strengthened my understanding of coding concepts.", image: "" },
+            { id: 10, name: "Arjun Chary", comment: "A great platform to learn medical coding.", image: "" },
+            // { id: 11, name: "Harsha Tony", comment: "Good experience. Best platform to learn medical coding.", image: "" },
+            { id: 12, name: "Shradha Khot", comment: "Hello! I am Shradha Maruti khot, student of Tatyasaheb kore college of pharmacy warananagar. Dist - Kolhapur, Maharashtra. I recently completed the internship program in medical coding with Vision Tech! 😊🌟 My program mentor was Pravallika Mam which provided good support and doubt solving with quick resolution of doubts and queries. Mr. Hari sir gives the clear idea about aptitude. Key highlight: Placement opportunities: Vision Tech provides support for placements, with some students securing internships and jobs. The program covers key areas like: Medical terminology and clinical record reading, Standard coding systems (ICD-10, CPT, HCPCS), Accuracy-driven approach to healthcare records. Thank you so much Vision Tech for giving knowledge about the medical coding and providing this wonderful experience. 😊👍", image: "", mentor: "Pravallika Yadav", college: "Tatyasaheb kore college of pharmacy warananagar" },
+            { id: 13, name: "Harsha Vardhini", comment: "Vision tech was very good flat form. I found the medical coding and coaching teaching to be very helpful and well-structured. The coach explained concepts clearly, cleared doubts patiently, and provided good guidance for practical understanding and career support. Overall, it was a valuable and positive learning experience. Learning medical coding is improving my knowledge of ICD, CPT, and HCPCS codes and building confidence in healthcare documentation.", image: "", mentor: "Pravallika Yadav", college: "New Pragathi College Commerce and Science" }
+        ],
+        pharmacovigilance: [
+            { id: 1, name: "Kunika", comment: "My experience with VisionTech Pvt Ltd was amazing. The Pharmacovigilance and Clinical Research internship and training sessions were knowledgeable and well-organized. The staff and team were very cooperative, and I faced no technical issues during online classes. I learned a lot and truly appreciate the opportunity provided by VisionTech.", image: "", mentor: "Vamsikrishna Vasabhakthula", college: "Lamrin Tech Skills University, Punjab", program: "Pharmacovigilance & Clinical Research" },
+            { id: 2, name: "Nityapriya Maharana", comment: "The Pharmacovigilance training program with VisionTech was insightful and career-focused. It provided practical exposure to industry-relevant concepts. I am thankful to my mentor, Vamsi Krishna Vasavaktula sir, whose guidance made sessions interactive and easy to understand.", image: "", mentor: "Vamsi Krishna Vasavaktula", college: "Xavier Pharmacy College", program: "Pharmacovigilance" },
+            { id: 3, name: "Swetha T", comment: "Vision Tech Academy provides excellent training with knowledgeable instructors and a supportive learning environment. The sessions were practical, well-structured, and industry-oriented, helping build strong skills and confidence.", image: "", program: "Pharmacovigilance" },
+            { id: 4, name: "Fathimafirdose Shaik", comment: "I had an excellent learning experience during the PV and Clinical Research training program at VisionTech. The course covered both theoretical and practical aspects with real-time examples. Special thanks to Vamsi sir for his engaging teaching and continuous support.", image: "", mentor: "Vamsi", college: "SIMS College of Pharmacy", program: "PV & Clinical Research" },
+            { id: 5, name: "Sathvika Yada", comment: "Completed the Pharmacovigilance course through Vision Tech. The program was well-structured with clear conceptual and practical explanations. Mentorship by Mr. V. Vanshikrishna made complex topics easy to understand.", image: "", mentor: "V. Vanshikrishna", college: "Vaagdevi College of Pharmacy, Hanamkonda", program: "Pharmacovigilance" },
+            { id: 6, name: "Pratham Bidkar", comment: "VisionTech’s live Pharmacovigilance classes were engaging, informative, and student-friendly. Doubts were addressed instantly, making the learning experience smooth and effective.", image: "", mentor: "M Navya", college: "Shivajirao Kadam Institute of Pharmacy and Research, Indore", program: "Pharmacovigilance" },
+            { id: 7, name: "Juby Appu", comment: "I completed the Pharmacovigilance Training Program at VisionTech, and it was a very informative and well-structured training. As a student from KMCH College of Pharmacy, I found the sessions extremely useful and relevant to my field. The mentor Vamsi Krishna explained concepts clearly, was very supportive, and guided us patiently throughout the training. The program helped improve my understanding of pharmacovigilance concepts and practical aspects. Overall, it was a great learning experience. I would definitely recommend VisionTech training programs to other pharmacy students.", image: "", mentor: "Vamsi Krishna", college: "KMCH College of Pharmacy" },
+            { id: 8, name: "kirti khandwal", comment: "I completed the Pharmacovigilance intership from @VisionTech as a student of PGIMS Rohtak. The training was well-structured and my mentor Vamshi Krishna explained concepts clearly and supportively.", image: "", mentor: "Vamshi Krishna", college: "PGIMS Rohtak" },
+            { id: 9, name: "Jeeban Pradeep Agnihotry", comment: "I had an excellent learning experience with the Pharmacovigilance Training Program. The sessions were very well-structured and practical, which helped me gain valuable knowledge and skills. I am from Xavier Pharmacy College, and I would like to sincerely thank my mentor, Vamsi Krishna Sir, for his guidance and support throughout the training. His teaching style made complex topics easy to understand and apply. Highly recommend VisionTech for anyone looking to build a strong foundation in pharmacovigilance!", image: "", mentor: "Vamsi Krishna Sir", college: "Xavier Pharmacy College" },
+            { id: 10, name: "RAHUL LOKARE", comment: "My experience with Visiontech has been truly exceptional. The knowledge and support they provide are top-notch, and I've really appreciated the efforts they've put into helping me grow. Overall, I'm really happy with my experience and grateful for the opportunity to learn from such a great team. Thank you, Visiontech.", image: "" },
+            { id: 11, name: "Shanthi priya", comment: "Am frm JNTUH UCPS joined pharmacovigellence learned frm mentor vamshi its really awesome", image: "", mentor: "vamshi", college: "JNTUH UCPS" },
+            { id: 12, name: "Yakkanti Pushpalatha", comment: "This is Pushpalatha, I have joined in vision tech, I have joined in pharmacovililance and my mentor name is Vamsi sir, he is very active and help students to face the interviews, seminars etc They are very informative and I am from sims college of Pharmacy. I am very happy to a part of vision tech", image: "", mentor: "Vamsi sir", college: "sims college of Pharmacy" },
+            { id: 13, name: "Sai Teja Goud", comment: "I have took Pharmacovigilence training in the @VisionTech. I'm very much satisfied with the course and gained knowledge about Pharmacovigilence role by Vamshi Krishna sir . I'm very thankful to VisionTech Group and Vinay Teja sir for providing a best platform to learn .", image: "", mentor: "Vamshi Krishna sir" },
+            { id: 14, name: "Manish Chaurasiya", comment: "I had a very good learning experience😊 during my Pharmacovigilance internship at Vision Tech Group. The course was well structured and covered essential concept.🌟 My mentor is Vamsi Krishna sir ,very supportive, knowledgeable, and patient. They explained topics clearly and always encouraged us to ask questions, which helped us build confidence and practical understanding. The training was beginner-friendly and very helpful . Overall, this internship improved my knowledge, skills, and understanding of real-time PV processes. I am thankful to the mentor and the Vision Tech Group team for their guidance and support. I would definitely recommend this course to anyone interested Pharmacovigilance.", image: "", mentor: "Vamsi Krishna" },
+            { id: 15, name: "I Chandrika", comment: "I took Pharmacovigilance coaching and Vamshi krishna sir was my mentor. I had a great experience with sir", image: "", mentor: "Vamshi krishna" },
+            { id: 16, name: "Divyansh Meena", comment: "I am very satisfied with the online training provided by the VisionTech team. The sessions were well organized, easy to understand, and very informative. The instructors explained the concepts clearly and were always supportive. Overall, it was a great learning experience and I would definitely recommend VisionTech.", image: "" },
+            { id: 17, name: "Utkarsh Dwivedi", comment: "Best institute. Pharmacovigilance course I'm choosing for my knowledge and further growth. Utkarsh dwivedi (chhatrapati shahu Ji Maharaj university kanpur) My mentor is Vamsi Krishna sir", image: "", mentor: "Vamsi Krishna", college: "chhatrapati shahu Ji Maharaj university kanpur" },
+            { id: 18, name: "Jyothi Dondaprolu", comment: "Recently I completed my pharmacovigilance and clinical research course in Vision Tech PVT LTD the sessions given by vamsikrishna sir are so clear and understandable the experience with vision tech was amazing I'm so happy 😊 THANK YOU SO MUCH vision tech groups", image: "", mentor: "vamsikrishna" }
+        ],
         clinical: [
             { id: 1, name: "VIJAY A", comment: "The hands-on Argus Safety training was a game changer. I felt ready for the job from day one.", image: "" },
             { id: 2, name: "ROSHINI K", comment: "Great explanation of MedDRA coding and causality assessment. Very relevant to industry standards.", image: "" },
             { id: 3, name: "AKASH", comment: "The clinical trial phases module was very detailed. Helped me crack the CRA interview.", image: "" },
             { id: 4, name: "MEGHA S", comment: "I loved the case processing workshops. It felt like actually working in a CRO.", image: "" },
             { id: 5, name: "PRADEEP R", comment: "The GCP guidelines were taught with real-life examples, not just dry theory.", image: "" },
-            { id: 6, name: "SHALINI N", comment: "Support for resume building was excellent. Got shortlistings from IQVIA and Icon.", image: "" }
+            { id: 6, name: "SHALINI N", comment: "Support for resume building was excellent. Got shortlistings from IQVIA and Icon.", image: "" },
+            { id: 7, name: "Fathimafirdose Shaik", comment: "I had an excellent learning experience at VisionTech Pvt Ltd during the PV and CR training program. The course was well structured and covered both theoretical and practical aspects in detail. Each concept was explained clearly with real-time examples, which made learning easy and effective. Special thanks to Vamsi sir, whose teaching style is very engaging and supportive. He patiently clarified every doubt and ensured that we understood the concepts thoroughly. This training has enhanced my knowledge and confidence in pharmacovigilance and clinical research. I highly recommend this program to pharmacy students.", image: "", mentor: "Vamsi Sir", college: "SIMS College of Pharmacy" },
+            { id: 8, name: "Jyothi Dondaprolu", comment: "Recently I completed my pharmacovigilance and clinical research course in Vision Tech PVT LTD the sessions given by vamsikrishna sir are so clear and understandable the experience with vision tech was amazing I'm so happy 😊 THANK YOU SO MUCH vision tech groups", image: "", mentor: "vamsikrishna" }
         ],
         tech: [
             { id: 1, name: "VIJAY A", comment: "The hands-on SDTM and ADaM practice was incredibly useful. I felt confident working with real clinical datasets.", image: "" },
@@ -147,6 +184,20 @@ const generateReviews = (category: string) => {
             { id: 4, name: "MEGHA S", comment: "I liked the focus on CMC documentation. It's a critical part of the job that is often ignored.", image: "" },
             { id: 5, name: "PRADEEP R", comment: "Mock audit sessions were an eye-opener. Learned how to handle inspector queries.", image: "" },
             { id: 6, name: "SHALINI N", comment: "The instructors have deep industry knowledge. Their tips on dossier compilation were gold.", image: "" }
+        ],
+        sas_programming: [
+            { id: 1, name: "Shruti Singh", comment: "Great experience with the Clinical SAS course with real-time projects. Anjan sir taught very patiently, covering both theory and practical concepts clearly.", image: "" },
+            { id: 2, name: "Divyanshu Singh", comment: "Completed the SAS Programming course and had an excellent experience. The balance between theory and hands-on practice boosted my confidence in SAS.", image: "" },
+            { id: 3, name: "Pilli Ashwini", comment: "The Clinical SAS training program was well-structured, covering Base SAS and Advanced SAS clinical programming topics. Excellent teaching by Anjan Kumar sir.", image: "" },
+            { id: 4, name: "Sachin Pande", comment: "Statistical analysis through SAS felt like live research work. Interactive sessions on interview preparation and model questions were very helpful.", image: "" },
+            { id: 5, name: "Sindhuja Reddy", comment: "Excellent learning experience starting from basic SAS programming to advanced concepts like data management, statistical procedures, and reporting.", image: "" },
+            { id: 6, name: "Akshee", comment: "Recently completed the SAS Programming online course. The explanations were clear, practical, and easy to follow.", image: "" },
+            { id: 7, name: "Neha Chavare", comment: "All SAS topics were covered clearly and all doubts were solved. The online SAS coding course was very effective.", image: "" },
+            { id: 8, name: "Tanaya Balip", comment: "Good learning experience in SAS programming. It helped me a lot and will be useful for my future career.", image: "" },
+            { id: 9, name: "Krish Panday", comment: "Learned Clinical SAS programming with database handling and report formation. Teachers explained everything very clearly at an affordable price.", image: "" },
+            { id: 10, name: "Debasish Dey", comment: "Completed SAS programming with a good learning experience. Mentor was supportive and explained concepts well.", image: "" },
+            { id: 11, name: "Faiyaz Modi", comment: "Great experience learning SAS programming. Teaching quality was excellent and easy to understand.", image: "" },
+            { id: 12, name: "Sanskruti Daphal", comment: "A great course to get started with SAS programming. It helped build a strong foundation.", image: "" }
         ]
     };
     return baseReviews[category] || baseReviews.clinical;
@@ -218,7 +269,7 @@ export const courses = [
             growth: "High demand in US Healthcare outsourcing hubs (India, Philippines). Career path leads to Senior Coder, Team Lead, and Auditor roles."
         },
         companies: generateCompanies("coding"),
-        reviews: generateReviews("coding"),
+        reviews: generateReviews("medical_coding"),
         faqs: generateFAQs("coding"),
         pricingFeatures: [
             "Live classes (2x WEEKLY)",
@@ -267,7 +318,7 @@ export const courses = [
             growth: "Critical role in every pharma company. Path moves from Associate to Scientist to Safety Physician."
         },
         companies: generateCompanies("clinical"),
-        reviews: generateReviews("clinical"),
+        reviews: generateReviews("pharmacovigilance"),
         faqs: generateFAQs("clinical"),
         pricingFeatures: [
             "Hands-on Argus Safety Database Training",
@@ -355,7 +406,7 @@ export const courses = [
             growth: "High paying niche. Senior programmers often move into Biostatistics or Principal Programmer roles."
         },
         companies: generateCompanies("tech"),
-        reviews: generateReviews("tech"),
+        reviews: generateReviews("sas_programming"),
         faqs: generateFAQs("tech"),
         pricingFeatures: [
             "SAS Certification Guidance",

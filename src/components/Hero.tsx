@@ -11,7 +11,7 @@ export default function Hero() {
                 <h1 className="font-serif text-5xl md:text-5xl text-gray-900 flex flex-wrap justify-center items-center gap-4">
                     <span>ADVANCING <span className="text-primary italic">DRUG SAFETY</span></span>
                     <div className="hidden lg:block animate-float ml-2">
-                        <img src="/landing/inline.png" alt="Drug Safety" className="h-20 w-20 rounded-3xl object-contain" />
+                        <img src="/landing/inline.png" alt="Drug Safety" className="h-12 w-20 rounded-3xl " />
                     </div>
                 </h1>
                 <h2 className="font-serif text-4xl md:text-4xl text-gray-900 mt-2">
