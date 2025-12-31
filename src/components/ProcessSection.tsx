@@ -85,7 +85,7 @@ export default function ProcessSection() {
                         return (
                             <div
                                 key={step.id}
-                                className={`relative flex flex-col pt-12 pb-8 px-6 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[5rem] shadow-xl transition-transform hover:-translate-y-2 duration-300 min-h-[600px]
+                                className={`relative flex flex-col pt-12 pb-8 px-6 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[5rem] shadow-xl transition-transform hover:-translate-y-2 duration-300 min-h-[500px] md:min-h-[600px]
                                     ${isDark
                                         ? "bg-[#0F5A6D] text-white"
                                         : "bg-white text-[#0A4D5C] border border-[#0A4D5C]"}

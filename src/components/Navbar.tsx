@@ -46,31 +46,50 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-                className="md:hidden text-primary z-50 relative"
+                className="md:hidden text-primary z-50 relative p-2"
+                aria-label="Toggle menu"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                {isOpen ? <X size={28} /> : <Menu size={28} />}
+                {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
 
             {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 h-[100dvh] bg-secondary z-40 flex flex-col items-center justify-start pt-32 gap-8 transition-transform duration-300 md:hidden overflow-y-auto ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
-                {navLinks.map((link) => (
+            <div className={`fixed inset-0 h-[100dvh] bg-secondary z-40 flex flex-col transition-all duration-700 ease-in-out md:hidden ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}>
+
+                {/* Decorative Background Elements */}
+                <div className="absolute top-20 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-1/2 blur-3xl"></div>
+                <div className="absolute bottom-40 right-0 w-80 h-80 bg-primary/10 rounded-full translate-x-1/3 blur-3xl"></div>
+
+                <div className="relative flex flex-col items-center justify-center flex-grow gap-8 z-10 pt-20">
+                    <div className="flex flex-col items-center gap-6">
+                        {navLinks.map((link, i) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className="text-3xl font-serif text-primary font-bold hover:tracking-widest transition-all duration-300 transform active:scale-90"
+                                style={{ transitionDelay: `${i * 50}ms` }}
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+
+                    <div className="w-16 h-0.5 bg-primary/20 my-4"></div>
+
                     <Link
-                        key={link.name}
-                        href={link.href}
-                        className="text-2xl font-serif text-primary font-bold"
+                        href="/login"
+                        className="bg-primary text-white px-16 py-4 rounded-full font-bold text-lg shadow-2xl hover:bg-green-600 active:scale-95 transition-all transform"
                         onClick={() => setIsOpen(false)}
                     >
-                        {link.name}
+                        Login
                     </Link>
-                ))}
-                <Link
-                    href="/login"
-                    className="mt-4 bg-primary text-white px-10 py-3 rounded-xl font-bold text-lg shadow-xl"
-                    onClick={() => setIsOpen(false)}
-                >
-                    Login
-                </Link>
+
+                    {/* Social Links shown in mobile menu */}
+                    <div className="mt-12 flex gap-8 text-primary/40">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Pharmavision 2025</span>
+                    </div>
+                </div>
             </div>
         </nav>
     );

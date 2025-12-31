@@ -27,11 +27,11 @@ export default function WhyChooseUs() {
             <div className="max-w-[1400px] mx-auto">
 
                 {/* Header */}
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="font-serif text-3xl font-bold text-primary uppercase tracking-wider">
+                <div className="text-center mb-12 md:mb-16 space-y-4">
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary uppercase tracking-wider">
                         Why Choose Us
                     </h2>
-                    <h3 className="font-bold text-xl md:text-2xl text-gray-900 uppercase tracking-wide">
+                    <h3 className="font-bold text-lg md:text-2xl text-gray-900 uppercase tracking-wide">
                         Expertise That Strengthens Every Step
                     </h3>
                 </div>
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
                         <div key={index} className="flex flex-col items-center text-center group">
 
                             {/* Arch Image Container */}
-                            <div className="relative w-full aspect-[3/4] mb-8 overflow-hidden rounded-t-[10rem] rounded-b-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+                            <div className="relative w-full aspect-[4/3] md:aspect-[3/4] mb-6 md:mb-8 overflow-hidden rounded-t-[10rem] rounded-b-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                     style={{ backgroundImage: `url('${feature.image}')` }}
