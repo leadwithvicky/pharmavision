@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full relative overflow-hidden bg-secondary">
       {/* Background decoration */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-green-200/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-teal-200/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-green-200/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-teal-200/20 rounded-full blur-3xl pointer-events-none" />
 
       <Navbar />
       <Hero />

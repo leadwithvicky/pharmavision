@@ -37,7 +37,7 @@ export default function GovernmentSection() {
     ];
 
     return (
-        <section className="w-full bg-secondary overflow-hidden">
+        <section id="government" className="w-full bg-secondary overflow-hidden">
             {/* ==========================================
                 DESKTOP VERSION (Large Screens)
                 ========================================== */}

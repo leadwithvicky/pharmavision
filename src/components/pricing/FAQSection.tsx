@@ -25,7 +25,7 @@ export default function FAQSection() {
     );
 
     return (
-        <section className="w-full py-20 px-4 md:px-8 bg-secondary overflow-hidden">
+        <section id="faq" className="w-full py-20 px-4 md:px-8 bg-secondary overflow-hidden">
             <div className="max-w-[1000px] mx-auto">
 
                 {/* FAQ Header & Visual */}

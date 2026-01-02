@@ -91,26 +91,21 @@ export default function Footer() {
                     {/* Quick Links */}
                     <AccordionSection id="quick" title="Quick">
                         <ul className="space-y-4 text-sm font-bold text-gray-600 uppercase tracking-widest">
-                            {['Home', 'About Us', 'Our Course', 'Pricing', 'Testimonials'].map((link) => (
-                                <li key={link}>
-                                    <Link href={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '')}`} className="hover:text-primary transition-colors block md:inline">
-                                        {link}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li><Link href="/" className="hover:text-primary transition-colors block md:inline">Home</Link></li>
+                            <li><Link href="/about" className="hover:text-primary transition-colors block md:inline">About Us</Link></li>
+                            <li><Link href="/courses" className="hover:text-primary transition-colors block md:inline">Our Course</Link></li>
+                            <li><Link href="/pricing" className="hover:text-primary transition-colors block md:inline">Pricing</Link></li>
+                            <li><Link href="/#testimonials" className="hover:text-primary transition-colors block md:inline">Testimonials</Link></li>
                         </ul>
                     </AccordionSection>
 
                     {/* Resources */}
                     <AccordionSection id="resources" title="Resources">
                         <ul className="space-y-4 text-sm font-bold text-gray-600 uppercase tracking-widest">
-                            {['Government Logos', 'FAQs', 'How it Works', 'Contact Us'].map((link) => (
-                                <li key={link}>
-                                    <Link href={link === 'FAQs' ? '/pricing' : '/contact'} className="hover:text-primary transition-colors block md:inline">
-                                        {link}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li><Link href="/about#government" className="hover:text-primary transition-colors block md:inline">Government Logos</Link></li>
+                            <li><Link href="/pricing#faq" className="hover:text-primary transition-colors block md:inline">FAQs</Link></li>
+                            <li><Link href="/#process" className="hover:text-primary transition-colors block md:inline">How it Works</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors block md:inline">Contact Us</Link></li>
                         </ul>
                     </AccordionSection>
 

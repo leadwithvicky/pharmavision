@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
 
+
   /* Semantic Palette */
   --primary: #2E7D67;
   /* Main Brand Color (Dark Teal) */
@@ -51,4 +52,12 @@ body {
   /* Default to background, components will use secondary where needed */
   color: var(--color-foreground);
   font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  height: 100%;
+  background: var(--color-secondary); /* Match body background to avoid white gap */
 }
